@@ -12,6 +12,12 @@ LOCAL_CFLAGS+= -D_ANDROID_ -DQCAMERA_REDEFINE_LOG
 
 LOCAL_CFLAGS += -Wall -Wextra -Werror -Wno-unused-parameter
 
+ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
+LOCAL_C_INCLUDES += \
+    $(TOP)/system/core/libion/include \
+    $(TOP)/system/core/libion/kernel-headers
+endif
+
 IMGLIB_HEADER_PATH := $(TARGET_OUT_INTERMEDIATES)/include/mm-camera/imglib
 
 LOCAL_C_INCLUDES += \
@@ -33,6 +39,9 @@ LOCAL_SRC_FILES := \
 LOCAL_MODULE           := libPmlib2d_interface
 LOCAL_PRELINK_MODULE   := false
 LOCAL_SHARED_LIBRARIES := libdl libcutils liblog
+ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
+LOCAL_SHARED_LIBRARIES += libion
+endif
 LOCAL_MODULE_TAGS := optional
 LOCAL_ODM_MODULE := true
 
