@@ -26,7 +26,7 @@ LOCAL_HEADER_LIBRARIES += generated_kernel_headers
 LOCAL_SRC_FILES := \
     src/mm_lib2d.c
 
-LOCAL_MODULE           := libmmlib2d_interface
+LOCAL_MODULE           := libPmlib2d_interface
 LOCAL_PRELINK_MODULE   := false
 LOCAL_SHARED_LIBRARIES := libdl libcutils liblog
 LOCAL_MODULE_TAGS := optional

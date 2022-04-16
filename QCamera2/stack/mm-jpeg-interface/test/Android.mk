@@ -33,7 +33,7 @@ LOCAL_HEADER_LIBRARIES := media_plugin_headers
 LOCAL_SRC_FILES := mm_jpeg_test.c
 
 LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
-LOCAL_MODULE           := mm-jpeg-interface-test
+LOCAL_MODULE           := prada_mm-jpeg-interface-test
 LOCAL_VENDOR_MODULE := true
 LOCAL_PRELINK_MODULE   := false
 LOCAL_SHARED_LIBRARIES := libcutils libdl libmmjpeg_interface liblog
@@ -76,7 +76,7 @@ LOCAL_HEADER_LIBRARIES := media_plugin_headers
 LOCAL_SRC_FILES := mm_jpegdec_test.c
 
 LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
-LOCAL_MODULE           := mm-jpegdec-interface-test
+LOCAL_MODULE           := prada_mm-jpegdec-interface-test
 LOCAL_VENDOR_MODULE := true
 LOCAL_PRELINK_MODULE   := false
 LOCAL_SHARED_LIBRARIES := libcutils libdl libmmjpeg_interface liblog
