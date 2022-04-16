@@ -53,6 +53,10 @@ LOCAL_SRC_FILES += \
         HAL/QCameraThermalAdapter.cpp
 endif
 
+ifeq ($(MI8937_CAM_USE_RENAMED_BLOBS_P),true)
+LOCAL_CFLAGS += -DRENAME_BLOBS
+endif
+
 # System header file path prefix
 LOCAL_CFLAGS += -DSYSTEM_HEADER_PREFIX=sys
 

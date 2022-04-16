@@ -10,6 +10,10 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS := -Werror \
                    -g -O0
 
+ifeq ($(MI8937_CAM_USE_RENAMED_BLOBS_P),true)
+LOCAL_CFLAGS += -DRENAME_BLOBS
+endif
+
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../qexif
 
 LOCAL_HEADER_LIBRARIES := libutils_headers

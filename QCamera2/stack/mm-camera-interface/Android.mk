@@ -3,6 +3,10 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+ifeq ($(MI8937_CAM_USE_RENAMED_BLOBS_P),true)
+LOCAL_CFLAGS += -DRENAME_BLOBS
+endif
+
 LOCAL_HEADER_LIBRARIES := libhardware_headers
 LOCAL_HEADER_LIBRARIES += media_plugin_headers
 LOCAL_HEADER_LIBRARIES += prada_camera_common_headers
