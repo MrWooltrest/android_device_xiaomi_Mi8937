@@ -90,7 +90,7 @@ LOCAL_HEADER_LIBRARIES += libandroid_sensor_headers
 LOCAL_HEADER_LIBRARIES += libcutils_headers
 LOCAL_HEADER_LIBRARIES += libsystem_headers
 LOCAL_HEADER_LIBRARIES += libhardware_headers
-LOCAL_HEADER_LIBRARIES += camera_common_headers
+LOCAL_HEADER_LIBRARIES += prada_camera_common_headers
 LOCAL_HEADER_LIBRARIES += display_headers
 
 #HAL 1.0 Include paths
@@ -139,7 +139,7 @@ LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := camera_common_headers
+LOCAL_MODULE := prada_camera_common_headers
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/stack/common
 include $(BUILD_HEADER_LIBRARY)
 
