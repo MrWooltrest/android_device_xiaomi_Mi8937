@@ -136,7 +136,7 @@ LOCAL_STATIC_LIBRARIES := android.hardware.camera.common@1.0-helper
 
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE := camera.prada
-LOCAL_VENDOR_MODULE := true
+LOCAL_ODM_MODULE := true
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
