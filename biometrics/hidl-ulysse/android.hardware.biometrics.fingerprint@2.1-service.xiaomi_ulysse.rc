@@ -12,7 +12,6 @@ service vendor.fps_hal.ulysse /vendor/bin/hw/android.hardware.biometrics.fingerp
 on property:ro.vendor.fingerprint.supported=2
     setprop ro.hardware.fingerprint ugg_fpc
     setprop ro.hardware.gf_fingerprint ugg
-    setprop ro.boot.product.hardware.sku fingerprint
     enable vendor.fps_hal.ulysse
 
 on property:ro.vendor.fingerprint.supported=0
@@ -20,3 +19,6 @@ on property:ro.vendor.fingerprint.supported=0
 
 on property:ro.vendor.fingerprint.state=0 && property:ro.vendor.fingerprint.supported=2
     stop vendor.fps_hal.ulysse
+
+on property:ro.vendor.fingerprint.state=1 && property:ro.vendor.fingerprint.supported=2
+    setprop ro.boot.product.hardware.sku fingerprint
