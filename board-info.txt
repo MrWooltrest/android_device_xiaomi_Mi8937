@@ -1,1 +1,1 @@
-require board=land|santoni|ugg
+require board=land|santoni|prada|ugg
